@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(140deg, #212629, #395467);
+    width: 100%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    padding-top: 10%;
+    justify-content: center;
+}
+
+a {
+    color: #5f89a7;
+    text-decoration: none;
+}
+
+.color-blue {
+    stop-color: #4d85da;
+}
+
+.color-red {
+    stop-color: #e23131;
+}
+
+.color-yellow {
+    stop-color: #fbe500;
+}
+
+.color-green {
+    stop-color: #25cd6b;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0;
+}
+
+.main__title {
+    text-align: center;
+    font-size: 48px;
+}
+
+.gradient-mask {
+    visibility: hidden;
+}
+
+.gauge-container {
+    padding-top: 3%;
+    float: right;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 220px;
+    width: 300px;
+}
+
+.gauge2 {
+    float: left;
+    padding-top: 3%;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.gauge .dxg-range.dxg-background-range {
+    fill: url(#gradientGauge);
+}
+
+.gauge .dxg-line {
+    -webkit-transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+    transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+
+.gauge .dxg-line path:first-child,
+.gauge .dxg-line path:last-child {
+    display: none;
+}
+
+.gauge .dxg-line path:nth-child(2),
+.gauge .dxg-line path:nth-child(6) {
+    stroke: #ed811c;
+}
+
+.gauge .dxg-line path:nth-child(3),
+.gauge .dxg-line path:nth-child(5) {
+    stroke: #a7db29;
+}
+
+.gauge .dxg-line path:nth-child(4) {
+    stroke: #25cd6b;
+}
+
+.gauge .dxg-elements text:first-child {
+    -webkit-transform: translate(19px, 13px);
+    transform: translate(19px, 13px);
+}
+
+.gauge .dxg-elements text:last-child {
+    -webkit-transform: translate(-27px, 14px);
+    transform: translate(-27px, 14px);
+}
+
+.gauge .dxg-value-indicator path {
+    -webkit-transform: scale(1.2) translate(0, -5px);
+    transform: scale(1.2) translate(0, -5px);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.gauge .dxg-value-indicator .dxg-title {
+    text-transform: uppercase;
+}
+
+.gauge .dxg-value-indicator .dxg-title text:first-child {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+.gauge .dxg-value-indicator .dxg-spindle-border:nth-child(4),
+.gauge .dxg-value-indicator .dxg-spindle-hole:nth-child(5) {
+    -webkit-transform: translate(0, -109px);
+    transform: translate(0, -109px);
+}
+
+.gauge .dxg-value-indicator .dxg-spindle-hole {
+    fill: #26323a;
+}
+
+.wfl {
+    float: right;
+    font-size: 30px;
+}
+
+.wbl {
+    float: left;
+    font-size: 30px;
+}
+
+.top {
+    padding-left: 25%;
+    padding-right: 55%;
+    position: relative;
+}
+
+.buttom {
+    padding-left: 25%;
+    padding-right: 55%;
+    position: relative;
+}
+
+.carimg {
+    margin-left: 1%;
+}
+
+.wfr {
+    float: right;
+    font-size: 30px;
+}
+
+.wbr {
+    float: left;
+    font-size: 30px;
+}
+
+.button {
+    margin-top: 2%;
+    margin-left: 45%;
+    font-size: 20px;
+    width: 10%;
+}

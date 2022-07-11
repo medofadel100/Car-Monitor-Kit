@@ -1,0 +1,72 @@
+var firewbl = document.getElementById("wbl ");
+var firewbr = document.getElementById("wbr ");
+var firewfl = document.getElementById("wfl ");
+var firewfr = document.getElementById("wfr ");
+var firebutton = document.getElementById("button");
+var firespeed;
+
+var firebasewblRef = firebase.database().ref().child("wbl");
+var firebasewbrRef = firebase.database().ref().child("wbr");
+var firebasewflRef = firebase.database().ref().child("wfl");
+var firebasewfrRef = firebase.database().ref().child("wfr");
+var firebasespeedRef = firebase.database().ref().child("speed");
+var firebuttonRef = firebase.database().ref().child("car_statu");
+
+
+firebasewblRef.on('value', function(datasnapshot) {
+    firewbl.innerText = datasnapshot.val();
+
+});
+
+firebasewbrRef.on('value', function(datasnapshot) {
+    firewbr.innerText = datasnapshot.val();
+
+});
+
+firebasewflRef.on('value', function(datasnapshot) {
+    firewfl.innerText = datasnapshot.val();
+
+});
+
+firebasewfrRef.on('value', function(datasnapshot) {
+    firewfr.innerText = datasnapshot.val();
+
+});
+
+document.getElementById("button").onclick = function() { myFunction() };
+firebuttonRef.on('value', function(datasnapshot) {
+
+
+    if (datasnapshot.val() == "open") {
+        firebutton.innerText = "Car is open";
+
+    } else {
+        firebutton.innerText = "Car is close";
+
+    }
+
+});
+
+function myFunction() {
+
+    firebuttonRef.on('value', function(datasnapshot) {
+
+
+        if (datasnapshot.val() == "open") {
+            firebuttonRef.set("close");
+        } else {
+            firebuttonRef.set("open");
+        }
+
+    });
+}
+
+
+
+
+
+
+
+firebasespeedRef.on('value', function(datasnapshot) {
+    $('canvas').attr("data-value", datasnapshot.val());
+});
